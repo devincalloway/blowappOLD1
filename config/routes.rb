@@ -1,5 +1,7 @@
 Blow::Application.routes.draw do
  
+  get "sitemap/index"
+
   resources :posts
 
 root :to => "posts#index"
