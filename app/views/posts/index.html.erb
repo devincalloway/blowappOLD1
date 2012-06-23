@@ -1,4 +1,7 @@
 <h1>Listing posts</h1>
-<%= render @posts %>
+<div class="post_index">
+  <%= render @posts %>
+</div>
+<%= paginate @posts %>
 <br />
 <%= link_to 'New Post', new_post_path %>

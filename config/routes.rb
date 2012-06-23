@@ -2,15 +2,14 @@ Blow::Application.routes.draw do
  
   resources :posts
 
-root :to => "home#index"
+root :to => "posts#index"
 devise_for :users
 resources :users, :only => [:show, :index]
   
 
-authenticated :user do
-  root :to => 'home#index'
-end
-
+#authenticated :user do
+ # root :to => 'home#index'
+#end
 
 
 
