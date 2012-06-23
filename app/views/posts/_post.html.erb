@@ -1,5 +1,5 @@
 <div class="post_header">
-  <h2><%= post.title %></h2>
+  <h2><%= link_to post.title, post %></h2>
   By <%= post.user.name %> on <%= post.created_at.strftime("%B %d %Y") %><br />
 </div>
   <%= truncate(post.body, :length => 500) %><br />
