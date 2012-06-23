@@ -1,0 +1,9 @@
+<div class="post_header">
+  <h2><%= post.title %></h2>
+  By <%= post.user.name %> on <%= post.created_at.strftime("%B %d %Y") %><br />
+</div>
+  <%= truncate(post.body, :length => 500) %><br />
+
+<%= link_to 'Show', post %>
+<%= link_to 'Edit', edit_post_path(post) %>
+<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
