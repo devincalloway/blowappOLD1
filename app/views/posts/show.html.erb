@@ -13,5 +13,24 @@
     </p>
   </div>
 </div>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<ul class="nav">
+
+  <% if user_signed_in? %>
+    <% if current_user.has_role? :moderator %>
+      <li>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      </li>
+    <% end %>
+    <% if current_user.has_role? :moderator %>
+      <li>
+      <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+    <% end %>
+    
+  <% else %>
+
+  <% end %>
+</ul>
+
+
 <%= link_to 'Back', posts_path %>

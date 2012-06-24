@@ -15,7 +15,7 @@
     <% end %>
     <% if current_user.has_role? :moderator %>
       <li>
-      <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
       </li>
     <% end %>
     
