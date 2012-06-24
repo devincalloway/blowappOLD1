@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  rolify
+  resourcify
   attr_accessible :body, :title, :user_id, :published
   belongs_to :user
   validates_presence_of :title, :body
