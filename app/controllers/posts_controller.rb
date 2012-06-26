@@ -25,6 +25,7 @@ before_filter :authenticate_user!, :except => [:index, :show]
   # GET /articles/new
   # GET /articles/new.xml
   def new
+ 
     @post = Post.new
 
     respond_to do |format|
@@ -81,7 +82,7 @@ before_filter :authenticate_user!, :except => [:index, :show]
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to(articles_url) }
+      format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
     end
   end
